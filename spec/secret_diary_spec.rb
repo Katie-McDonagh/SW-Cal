@@ -30,6 +30,10 @@ describe SecretDiary do
       subject.add_entry("this is another entry")
       expect(subject.read_entry).to eq "this is another entry"
     end
+
+    it "stops a reader from accessing the entries if locked" do
+      expect { subject.read_entry }.to raise_error "This diary is locked"
+    end
   end
 
   

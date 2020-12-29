@@ -22,6 +22,7 @@ class SecretDiary
   end
 
   def read_entry
+    raise "This diary is locked" if @is_it_locked == true
     @entries.last
   end
 
