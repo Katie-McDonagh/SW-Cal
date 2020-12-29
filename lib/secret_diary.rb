@@ -17,6 +17,7 @@ class SecretDiary
   end
 
   def add_entry(message)
+    raise "This diary is locked" if @is_it_locked == true
     @entries.push(message)
   end
 
