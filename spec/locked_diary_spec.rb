@@ -11,4 +11,10 @@ describe LockedDiary do
     expect(subject.is_it_locked).to eq true
   end
 
+  it "can be locked after being unlocked" do 
+    subject.unlock
+    subject.lock
+    expect(subject.is_it_locked).to eq true
+  end
+
 end

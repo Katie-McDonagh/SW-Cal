@@ -10,4 +10,8 @@ class LockedDiary
     @is_it_locked = false
   end
 
+  def lock 
+    @is_it_locked = true
+  end
+
 end
