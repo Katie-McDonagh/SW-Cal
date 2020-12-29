@@ -1,9 +1,10 @@
 class SecretDiary 
 
-  attr_reader :is_it_locked
+  attr_reader :is_it_locked, :entries
 
   def initialize 
     @is_it_locked = true
+    @entries = []
 
   end
 
@@ -13,6 +14,10 @@ class SecretDiary
 
   def unlock
     @is_it_locked = false
+  end
+
+  def add_entry(message)
+    @entries.push(message)
   end
 
 end

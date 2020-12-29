@@ -10,4 +10,11 @@ describe SecretDiary do
     expect(subject.is_it_locked).to eq false
   end
 
+  it "can be written in whilst unlocked" do
+    subject.unlock
+    subject.add_entry("this is my entry")
+    expect(subject.entries.last).to eq "this is my entry"
+
+  end
+
 end
