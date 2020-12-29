@@ -7,8 +7,8 @@ describe LockedDiary do
     expect(subject.is_it_locked).to eq false
   end
 
-  # it "is locked upon creation" do
-  #   expect(subject.is_it_locked).to eq true
-  # end
+  it "is locked upon creation" do
+    expect(subject.is_it_locked).to eq true
+  end
 
 end
