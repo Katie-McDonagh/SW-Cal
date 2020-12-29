@@ -21,4 +21,8 @@ class SecretDiary
     @entries.push(message)
   end
 
+  def read_entry
+    @entries.last
+  end
+
 end

@@ -19,10 +19,17 @@ describe SecretDiary do
     end
 
     it "cannot be whilst locked" do
-
-
+      expect{ subject.add_entry("hello") }.to raise_error "This diary is locked"
     end
 
+  end
+
+  describe "reading the diary" do 
+    it "user can read if its unlocked" do
+      subject.unlock
+      subject.add_entry("this is another entry")
+      expect(subject.read_entry).to eq "this is another entry"
+    end
   end
 
   
